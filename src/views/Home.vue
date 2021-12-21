@@ -1,4 +1,5 @@
 <template>
+  <nav-top/>
   <div class="home">
     <search/>
     <div class="re">
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+import navTop from '../components/navTop.vue'
 import getInfo from '../utils/getInfo.js'
 import search from '../components/serach.vue'
 import res from '../components/restarun.vue'
@@ -18,7 +20,8 @@ export default {
   name: 'Home',
   components:{
     search:search,
-    res:res
+    res:res,
+    navTop:navTop
   },
   data(){
     return{
@@ -34,10 +37,10 @@ export default {
 </script>
 <style lang="scss" scoped>
   .home{
-    margin-top: 11rem;
+    margin-top: 10rem;
     .re{
       text-align: left;
-      padding: 2%;
+      padding: 1% 2%;
       .res{
         display: flex;
       }

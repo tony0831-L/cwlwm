@@ -1,15 +1,13 @@
 <template>
-  <nav-top/>
   <router-view/>
 </template>
 
 <script>
-import navTop from './components/navTop.vue'
   export default {
     name:"app",
-    components:{
-      navTop:navTop
-    },
+    setup(){
+      localStorage.setItem("userInfo",JSON.stringify({}))
+    }
   }
 </script>
 

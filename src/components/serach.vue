@@ -18,7 +18,7 @@ export default {
         display: flex;
         width: 100%;
         input{
-            margin-left: 7.3%;
+            margin-left: 6%;
             width: 54rem;
             height: 2.19rem;
             border: 2px solid #B8B8B8;
