@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-      <input type="text" placeholder="您好, 請問今晚想來點什麼?">
+       <input type="text" :placeholder="msg">
       <div class="filter">
 
       </div>
@@ -9,7 +9,11 @@
 
 <script>
 export default {
-
+    data(){
+        return{
+            msg:"您好,"+JSON.parse(localStorage.getItem("userInfo")).name+" 請問今晚想來點什麼?",
+        }
+    }
 }
 </script>
 

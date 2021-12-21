@@ -5,10 +5,10 @@
     </router-link> 
     <div class="right">
         <router-link to="/login" class="login">
-            <h2 v-show="!user.img">請登入後使用本服務&nbsp;&nbsp;&nbsp;</h2>
             <div class="img" v-show="user.img"><img :src="user.img" alt="" srcset="" ></div>
             <div class="name" v-show="user.img">{{user.name}}</div>
             <i class="bi bi-person-circle" v-show="!user.img"></i>
+            <h2 v-show="!user.img">請登入後使用本服務&nbsp;&nbsp;&nbsp;</h2>
         </router-link>
         <router-link to="/cart" class="cart">
             <i class="bi bi-cart"></i>
@@ -70,8 +70,8 @@ nav{
                 font-size: 1rem;
             }
             .img{
-                width: 50px;
-                height: 50px;
+                width: 38px;
+                height: 38px;
                 border-radius: 100%;
                 background-color: #313131;
                 border: solid 1px #31313109;
@@ -82,6 +82,11 @@ nav{
                 img{
                     max-width: 100%;
                 }
+            }
+            .name{
+                margin-left: .75rem;
+                font-size: 1rem;
+                font-weight: 700;
             }
         }
         .cart{
