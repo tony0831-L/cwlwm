@@ -18,7 +18,7 @@
     box-sizing: border-box;
   }
   html {
-    font-size:100%;
+    font-size:90%;
   }
   #app {
     font-family: 'Roboto', sans-serif;

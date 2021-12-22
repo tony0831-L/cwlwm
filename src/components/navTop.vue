@@ -8,7 +8,7 @@
             <div class="img" v-show="user.img"><img :src="user.img" alt="" srcset="" ></div>
             <div class="name" v-show="user.img">{{user.name}}</div>
             <i class="bi bi-person-circle" v-show="!user.img"></i>
-            <h2 v-show="!user.img">請登入後使用本服務&nbsp;&nbsp;&nbsp;</h2>
+            <h2 v-show="!user.img">未登入&nbsp;&nbsp;&nbsp;</h2>
         </router-link>
         <router-link to="/cart" class="cart">
             <i class="bi bi-cart"></i>
