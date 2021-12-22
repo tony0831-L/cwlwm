@@ -11,9 +11,9 @@
 export default {
     data(){
         return{
-            msg:"您好,"+JSON.parse(localStorage.getItem("userInfo")).name+" 請問今晚想來點什麼?",
+            msg:JSON.parse(localStorage.getItem("userInfo")).name?"您好"+JSON.parse(localStorage.getItem("userInfo")).name+", 請問今晚想來點什麼?":"您好, 請問今晚想來點什麼?"
         }
-    }
+    },
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="res">
+  <div class="res" @click="choose">
     <div class="img">
         <img :src="res.img" alt="">
     </div>
@@ -21,6 +21,12 @@
 export default {
     props:["res"],
     name:"restarun",
+    methods:{
+        choose(){
+            localStorage.setItem("choose",JSON.stringify(this.res))
+            this.$router.replace('/rest')
+        }
+    }
 }
 </script>
 
