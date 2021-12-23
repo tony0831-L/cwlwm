@@ -1,4 +1,4 @@
-# 偉倫外賣前端:
+# 偉倫外賣前端(https://dev.d2435hd77aobnh.amplifyapp.com/):
 
 ## 項目概覽:
 
