@@ -1,4 +1,12 @@
-# 偉倫外賣前端(https://dev.d2435hd77aobnh.amplifyapp.com/):
+# 偉倫外賣前端:
+
+## 相關連結:
+
+### 生產環境連結:https://dev.d2435hd77aobnh.amplifyapp.com/
+
+### 設計圖:https://www.figma.com/file/zI0ueZiLzHLhBFmUb4LHof/Untitled?node-id=18%3A116
+
+
 
 ## 項目概覽:
 
