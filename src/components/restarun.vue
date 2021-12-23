@@ -56,12 +56,12 @@ export default {
             justify-content: center;
             align-items: center;
             img{
-                min-width: 150%;
+                max-height: 100%;
                 opacity: .9;
                 cursor: pointer;
                 transition: all .5s;
                 &:hover{ 
-                    min-width: 155%;   
+                    max-height: 105%;   
                 }
             }
         }

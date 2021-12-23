@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 nav{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 12%;
     top: 0px;

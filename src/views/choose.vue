@@ -10,8 +10,10 @@
             <p><i class="bi bi-star-fill"></i>顧客評價: {{data.star}}</p>
         </div>
         <div class="menu">
-            <h2>menu</h2>
-            <dish v-for="(i,index) in data.menu" :key="index" :dish="i"/>
+            <h2>Menu:</h2>
+            <div class="dishes">
+                <dish v-for="(i,index) in data.menu" :key="index" :dish="i" :res="data.name"/>
+            </div>
         </div>
     </div>
 </template>
@@ -47,7 +49,7 @@ export default {
             width:100%;
             height: 19rem;
             display: flex;
-            overflow-y: hidden;
+            overflow: hidden;
             position: relative;
             justify-content: center;
             align-items: center;
@@ -71,6 +73,20 @@ export default {
             font-size: 1.25rem;
             p{
                 margin: 1% 4%;
+            }
+        }
+        .menu{
+            text-align: left;
+            padding: 0% 5rem;
+            h2{
+                font-weight: 500;
+                font-size: 1.4rem;
+                margin-bottom: 2rem;
+            }
+            .dishes{
+                display: flex;
+                width:100%;
+                flex-wrap: wrap;
             }
         }
     }
