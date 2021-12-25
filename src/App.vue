@@ -7,7 +7,10 @@
     name:"app",
     setup(){
       localStorage.setItem("userInfo",JSON.stringify({}));
-      localStorage.setItem("dList",JSON.stringify([]));
+      localStorage.setItem("dList",JSON.stringify({
+        name:"",
+        list:[]
+      }));
     }
   }
 </script>

@@ -12,20 +12,33 @@
         </router-link>
         <router-link to="/cart" class="cart">
             <i class="bi bi-cart"></i>
+            <p> • </p>
+            <p>{{dList.length}}</p>
         </router-link>
     </div>
 </nav>
 </template>
 
 <script>
+import bus from "../utils/bus.ts";
 export default {
     name:"nav",
     data(){
         return{
-            user:JSON.parse(localStorage.getItem("userInfo"))
+            user:JSON.parse(localStorage.getItem("userInfo")),
+            dList:JSON.parse(localStorage.getItem("dList")).list
         }
     },
     methods:{
+        init(){
+            this.user = JSON.parse(localStorage.getItem("userInfo"))
+            this.dList = JSON.parse(localStorage.getItem("dList")).list
+        }
+    },
+    mounted(){
+        bus.on("reload",()=>{
+            this.init();
+        })
     }
 }
 </script>
@@ -92,16 +105,18 @@ nav{
         .cart{
             margin-left: 1.5rem;
             margin-right: 2rem;
-            border-radius: 100%;
+            border-radius: .7rem;
             color: #313131;
-            width: 38px;
-            height: 38px;
-            padding: 2px 2px;
+            padding: .1rem .5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #fff;
-            font-size: 1.5rem;
+            font-size: 1.9rem;
+            p{
+                font-size:1.5rem;
+                font-weight: 300;
+            }
         }
     }
 }

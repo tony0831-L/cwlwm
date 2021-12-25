@@ -12,15 +12,20 @@
 </template>
 
 <script>
+import bus from "../utils/bus.ts";
 export default {
     props:["res","dish"],
     name:"dish",
     methods:{
         add(){
-            let dList = JSON.parse(localStorage.getItem("dList"));
+            let dList = JSON.parse(localStorage.getItem("dList")).list;
              console.log(dList);
             dList.push(this.dish);
-            localStorage.setItem("dList",JSON.stringify(dList));
+            localStorage.setItem("dList",JSON.stringify({
+                name:this.res,
+                list:dList
+            }));
+            bus.emit("reload");
         }
     }
 }
@@ -50,7 +55,7 @@ export default {
     .text{
         text-align:left;
         margin-left:2rem;
-        font-size:1.25rem;
+        font-size:1.2rem;
         margin-top: 2rem;
     }
     .add{
