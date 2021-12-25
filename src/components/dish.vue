@@ -17,7 +17,10 @@ export default {
     name:"dish",
     methods:{
         add(){
-            console.log(this.dish);
+            let dList = JSON.parse(localStorage.getItem("dList"));
+             console.log(dList);
+            dList.push(this.dish);
+            localStorage.setItem("dList",JSON.stringify(dList));
         }
     }
 }
@@ -26,8 +29,8 @@ export default {
 <style lang="scss" scoped>
 .dish{
     display: flex;
-    margin-bottom: 2rem;
-    margin-right: 2rem;
+    margin: 0rem 2rem;
+    margin-bottom: 3rem;
     .img{
         width: 18.75rem;
         height: 18.75rem;

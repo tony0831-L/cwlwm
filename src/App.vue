@@ -6,7 +6,8 @@
   export default {
     name:"app",
     setup(){
-      localStorage.setItem("userInfo",JSON.stringify({}))
+      localStorage.setItem("userInfo",JSON.stringify({}));
+      localStorage.setItem("dList",JSON.stringify([]));
     }
   }
 </script>
