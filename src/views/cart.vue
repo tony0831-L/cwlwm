@@ -1,4 +1,5 @@
 <template>
+<navTop/>
 <div class="container">
     cart
     {{dList}}
@@ -6,16 +7,22 @@
 </template>
 
 <script>
+import navTop from "../components/navTop.vue"
 export default {
   name: 'cart',
+  components:{
+      navTop: navTop,
+  },
   data(){
       return{
-        dList:JSON.parse(localStorage.getItem("dList"))
+        name:JSON.parse(localStorage.getItem("dList")).name,
+        dList:JSON.parse(localStorage.getItem("dList")).list
       }
   },
   methods:{
     init(){
-      this.dList = JSON.parse(localStorage.getItem("dList"))
+      this.name=JSON.parse(localStorage.getItem("dList")).name,
+      this.dList = JSON.parse(localStorage.getItem("dList")).list
     }
   },
   mounted(){
@@ -24,5 +31,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+  .container{
+    position: absolute;
+    top: 12%;
+    width:100%;
+  }
 </style>

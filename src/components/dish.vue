@@ -19,13 +19,16 @@ export default {
     methods:{
         add(){
             let dList = JSON.parse(localStorage.getItem("dList")).list;
-             console.log(dList);
-            dList.push(this.dish);
-            localStorage.setItem("dList",JSON.stringify({
-                name:this.res,
-                list:dList
-            }));
-            bus.emit("reload");
+            if (JSON.parse(localStorage.getItem("dList")).name!==""&&this.res!==JSON.parse(localStorage.getItem("dList")).name) {
+                alert("不同餐廳")
+            } else {
+                dList.push(this.dish);
+                localStorage.setItem("dList",JSON.stringify({
+                    name:this.res,
+                    list:dList
+                }));
+                bus.emit("reload");
+            }
         }
     }
 }
