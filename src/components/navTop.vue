@@ -45,10 +45,8 @@ export default {
 
 <style lang="scss" scoped>
 nav{
-    position: absolute;
     width: 100%;
-    height: 12%;
-    top: 0px;
+    height: 9rem;
     background: #FFDA58;
     display: flex;
     justify-content: space-between;

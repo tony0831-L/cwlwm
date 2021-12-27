@@ -42,8 +42,6 @@ export default {
 
 <style lang="scss" scoped>
     .info {
-        position: absolute;
-        top: 12%;
         width:100%;
         .img{
             width:100%;
