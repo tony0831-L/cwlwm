@@ -46,6 +46,8 @@ export default {
         display: flex;
         justify-content: center;
         border-radius: 0px 50px;
+        background: #E0E0E0;
+        cursor: pointer;
         img{
             cursor: pointer;
             min-height: 100%;
