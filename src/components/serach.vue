@@ -2,7 +2,7 @@
   <div class="search">
        <input type="text" :placeholder="msg">
       <div class="filter">
-
+          搜尋
       </div>
   </div>
 </template>
@@ -34,6 +34,10 @@ export default {
             width: 9.5rem;
             height: 2.19rem;
             background: #6A6A6A;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 45px;
         }
     }

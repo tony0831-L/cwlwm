@@ -16,15 +16,18 @@
             </div>
         </div>
     </div>
+    <foot/>
 </template>
 
 <script>
 import navTop from "../components/navTop.vue"
 import dish from "../components/dish.vue"
+import foot from '../components/footer.vue'
 export default {
     components:{
         navTop: navTop,
-        dish: dish
+        dish: dish,
+        foot:foot,
     },
     data(){
         return{
@@ -65,6 +68,7 @@ export default {
             }
         }
         .des{
+            margin-top: 1.5rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -82,10 +86,9 @@ export default {
                 margin-bottom: 2rem;
             }
             .dishes{
-                display: flex;
-                justify-content: center;
-                width:100%;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
             }
         }
     }

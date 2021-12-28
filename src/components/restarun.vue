@@ -37,14 +37,14 @@ export default {
     .res{
         width: 21rem;
         height: 17rem;
-        margin: 1rem 2.75rem;
         border-radius: 0px 50px;
         display: flex;
         justify-content: center;
         background: #E0E0E0;
         align-items: center;
         position: relative;
-        box-shadow: .07rem .07rem 16px 0 rgb(0 0 0 / .7);
+        box-shadow: .5rem .8rem .8rem 0 rgb(0 0 0 / .7);
+        margin: 2rem;
         cursor: pointer;
         .img{
             border-radius: 0px 50px;
@@ -73,7 +73,7 @@ export default {
             padding: .2rem .5rem;
             border-radius: .3rem;
             h1{
-                font-size: 1rem;
+                font-size: 1.2rem;
                 color: #fff;
             }
         }
