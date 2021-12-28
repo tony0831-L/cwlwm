@@ -2,14 +2,14 @@
 <div class="container">
       <div class="login">
       <div class="img">
-          <img :src="user.img" alt="">
+          <i class="bi bi-person-circle"></i>
       </div>
         <div class="input">
-            <div class="block"></div>
+            <div class="block">Account</div>
             <input type="text" v-model="user.name" placeholder="Account/Username">
         </div>
       <div class="input">
-          <div class="block"></div>
+          <div class="block">password</div>
           <input type="password" v-model="user.pass" placeholder="password">
       </div>
       <button @click="login">
@@ -68,23 +68,30 @@ export default {
                 width: 16.875rem;
                 height: 16.875rem;
                 border-radius: 100%;
-                background-color: #C4C4C4;
                 overflow: hidden;
                 align-items: center;
-                img{
-                    max-width: 100%;
+                i{
+                    font-size:16rem;
+                    color: #C4C4C4;
                 }
             }
             input{
                 width: 37.8rem;
                 height: 4rem;
                 text-align: center;
+                border-radius:3rem;
             }
             .block{
                 position: absolute;
                 width: 10rem;
                 height: 4rem;
                 background: #FFDA58;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #333;
             }
             button{
                 align-self: flex-end;
@@ -93,6 +100,7 @@ export default {
                 height: 3.8rem;
                 background: #575757;
                 color: #fff;
+                border-radius:3rem;
             }
         }
     }

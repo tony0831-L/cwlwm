@@ -1,7 +1,7 @@
 <template>
 <nav>
     <router-link to="/" class="home">
-        <h2>Home</h2>
+        <h2><i class="bi bi-house-fill"></i></h2>
     </router-link> 
     <div class="right">
         <router-link to="/login" class="login">
@@ -62,9 +62,14 @@ nav{
         color: #fff;
         h2{
             padding: .5rem 3rem;
-            background: #575757;
-            font-size: 1.25rem;
-            font-weight: 400;
+            i{
+                font-size: 2.25rem;
+                color:#313131;
+                transition: all .5s;
+                &:hover{
+                    font-size: 2.5rem;
+                }
+            }
         }
     }
     .right{

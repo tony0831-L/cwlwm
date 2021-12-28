@@ -3,8 +3,7 @@
   <div class="home">
     <search/>
     <div class="re">
-      <h1>recommand:</h1>
-      <div class="res">
+      <div class="ress">
         <res :res="i" v-for="(i,index) in res" :key="index"/>
       </div>
     </div>
@@ -25,6 +24,7 @@ export default {
   },
   data(){
     return{
+      i:3,
       res:[],
     }
   },
@@ -41,8 +41,9 @@ export default {
     .re{
       text-align: left;
       padding: 1% 2%;
-      .res{
-        display: flex;
+      .ress{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
       }
       h1{
         margin-left: 2%;

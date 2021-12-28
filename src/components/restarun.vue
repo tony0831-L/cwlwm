@@ -35,7 +35,7 @@ export default {
         font-weight: 500;
     }
     .res{
-        width: 24.31rem;
+        width: 21rem;
         height: 17rem;
         margin: 1rem 2.75rem;
         border-radius: 0px 50px;
@@ -71,8 +71,9 @@ export default {
             left: -16px;
             background: #424242;
             padding: .2rem .5rem;
+            border-radius: .3rem;
             h1{
-                font-size: 1.25rem;
+                font-size: 1rem;
                 color: #fff;
             }
         }
