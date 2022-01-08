@@ -18,14 +18,15 @@
         total&nbsp;&nbsp;&nbsp;&nbsp;{{total}}
       </div>
     </div>
-    <input class="comment" placeholder="comment">
-    <button>sure</button>
+    <input class="comment" placeholder="comment" v-model="comment">
+    <button @click="commit">sure</button>
 </div>
 </template>
 
 <script>
 import navTop from "../components/navTop.vue"
 import order from "../components/order.vue"
+// import postData from '../utils/postData'
 export default {
   name: 'cart',
   components:{
@@ -36,6 +37,7 @@ export default {
       return{
         name:JSON.parse(localStorage.getItem("dList")).name,
         dList:JSON.parse(localStorage.getItem("dList")).list,
+        comment:"",
         total:0,
         pos:{}
       }
@@ -53,6 +55,19 @@ export default {
           lng:pos.coords.longitude
         }
       })
+    },
+    commit(){
+      let data={
+        "res":this.name,
+        "consumer":JSON.parse(localStorage.getItem("userInfo")).name,
+        "list":this.dList,
+        "star":"5",
+        "comment":"難吃死了"
+      }
+      console.log(data)
+      // postData.trade(data).then(res=>{
+      //   console.log(res)
+      // })
     }
   },
   mounted(){
