@@ -10,6 +10,11 @@ async function getUser(){
     return res
 }
 
+async function getUserHis(name){
+    let res =  await axios.put('https://cwslbot.herokuapp.com/user/myHistory',{"consumer":name})
+    return res
+}
+
 module.exports = {
-    getRes,getUser
+    getRes,getUser,getUserHis
 }
