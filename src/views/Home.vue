@@ -41,7 +41,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   .home{
-    margin-top: 2rem;
+    margin: 3.1rem 0rem;
     .re{
       text-align: left;
       padding: 1% 2%;
