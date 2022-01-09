@@ -35,10 +35,22 @@ export default {
       res:[],
     }
   },
+  methods:{
+    init(){
+      getInfo.getRes().then(res=>{
+        if(res.data.length==0){
+          setTimeout(()=>{
+            console.log(res.data.length)
+            this.init()
+          },3000)
+        }else{
+          this.res=res.data
+        }
+      })
+    }
+  },
   mounted(){
-    getInfo.getRes().then(res=>{
-      this.res=res.data
-    })
+    this.init()
   }
 }
 </script>

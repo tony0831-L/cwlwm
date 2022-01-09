@@ -15,7 +15,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    height:3.5rem;
+    height:5.5rem;
     background: #B6B6B6;
     h2{
         font-size: 1.25rem;
