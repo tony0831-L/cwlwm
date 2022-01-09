@@ -89,7 +89,7 @@ export default {
   font-size: 1.2rem;
 }
   .container{
-    padding: 10.6rem 5.3rem;
+    padding: 8.6rem 5.3rem;
     padding-bottom: 2.6rem;
     display: flex;
     flex-direction: column;
