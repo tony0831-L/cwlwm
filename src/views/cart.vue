@@ -26,7 +26,7 @@
 <script>
 import navTop from "../components/navTop.vue"
 import order from "../components/order.vue"
-// import postData from '../utils/postData'
+import postData from '../utils/postData'
 export default {
   name: 'cart',
   components:{
@@ -62,12 +62,17 @@ export default {
         "consumer":JSON.parse(localStorage.getItem("userInfo")).name,
         "list":this.dList,
         "star":"5",
-        "comment":"難吃死了"
+        "comment":this.comment
       }
-      console.log(data)
-      // postData.trade(data).then(res=>{
-      //   console.log(res)
-      // })
+      postData.trade(data).then(res=>{
+        console.log(res)
+      })
+      this.$router.replace('/')
+      alert("訂單已送出")
+      localStorage.setItem("dList",JSON.stringify({
+        name:"",
+        list:[]
+      }));
     }
   },
   mounted(){
@@ -84,7 +89,8 @@ export default {
   font-size: 1.2rem;
 }
   .container{
-    padding: 5.3rem;
+    padding: 10.6rem 5.3rem;
+    padding-bottom: 2.6rem;
     display: flex;
     flex-direction: column;
     .list{

@@ -6,7 +6,10 @@
             <p>{{dish.price}}元</p>
         </div>
         <div class="add" @click="add">
-            AddInCart
+            <!-- AddInCart -->
+            <div class="test">
+                +&nbsp;<i class="bi bi-cart"></i>
+            </div>
         </div>
     </div>
 </template>
@@ -66,11 +69,15 @@ export default {
     .add{
         align-self: flex-end;
         font-size:1.25rem;
-        padding: 1% 2%;
         margin: 2% 0%;
         color: #fff;
         cursor: pointer;
         background: #636363;
+        .test{
+            padding: .5rem 1rem;
+            font-size:1.5rem;
+            display: flex;
+        }
     }
 }
 </style>

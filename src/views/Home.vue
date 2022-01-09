@@ -1,14 +1,17 @@
 <template>
-  <nav-top/>
   <div class="home">
-    <search/>
-    <h2 v-show="!res.length">loading.....</h2>
+    <search v-show="res.length"/>
+    <div class="loading" v-show="!res.length">
+      <img src="../assets/loading.gif" alt="loading">
+      <h2>loading...</h2>
+    </div>
     <div class="re">
       <div class="ress">
         <res :res="i" v-for="(i,index) in res" :key="index"/>
       </div>
     </div>
   </div>
+  <nav-top/>
   <foot/>
 </template>
 
@@ -41,6 +44,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   .home{
+    padding-top:8.6rem;
     margin: 3.1rem 0rem;
     .re{
       text-align: left;
@@ -54,6 +58,13 @@ export default {
       h1{
         margin-left: 2%;
         font-weight: 400;
+      }
+    }
+    .loading{
+      font-size: 1.5rem;
+      margin: 13.5rem;
+      h2{
+        margin-top: -3%;
       }
     }
   }

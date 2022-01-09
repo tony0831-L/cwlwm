@@ -45,11 +45,14 @@ export default {
 
 <style lang="scss" scoped>
 nav{
+    position: fixed;
+    top: 0px;
     width: 100%;
     height: 8.6rem;
     background: #FFDA58;
     display: flex;
     justify-content: space-between;
+    z-index: 10;
     a{
         color: #313131;
         text-decoration: none;

@@ -2,8 +2,13 @@
 <div class="container">
       <div class="login">
       <div class="img">
-          <i class="bi bi-person-circle"></i>
+          <img :src="user.img" alt="" v-if="user.img">
+          <i class="bi bi-person-circle" v-else></i>
       </div>
+        <div class="input">
+            <div class="block">thumbnail</div>
+            <input type="text" v-model="user.img" placeholder="image url">
+        </div>
         <div class="input">
             <div class="block">Account</div>
             <input type="text" v-model="user.name" placeholder="Account/Username">
@@ -12,14 +17,9 @@
           <div class="block">password</div>
           <input type="password" v-model="user.pass" placeholder="password">
       </div>
-      <div class="btnGroup">
-        <button @click="regi">
-            register
-        </button>
-        <button @click="login">
-            login
-        </button>
-      </div>
+      <button @click="regi">
+          register
+      </button>
   </div>
 </div>
 </template>
@@ -38,9 +38,9 @@ export default {
       }
   },
   methods:{
-      login(){
-          sign.login(this.user).then(res=>{
-              if(res.data.stat){
+      regi(){
+          sign.regi(this.user).then(res=>{
+              if(res.data.message=="註冊成功"){
                 this.$router.replace('/')
                 this.user=(res.data.info)
                 localStorage.setItem("userInfo",
@@ -50,17 +50,8 @@ export default {
                   alert(res.data.message)
               }
           })
-      },
-      regi(){
-          this.$router.replace('/regi')
       }
-  },
-    mounted(){
-        if(JSON.parse(localStorage.getItem("userInfo")).name){
-            console.log('setting')
-            this.$router.replace('/setting')
-        }
-    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -107,20 +98,14 @@ export default {
                 align-items: center;
                 color: #333;
             }
-            .btnGroup{
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-                gap: 2rem;
-                button{
-                    align-self: flex-end;
-                    cursor: pointer;
-                    width: 10rem;
-                    height: 3.8rem;
-                    background: #575757;
-                    color: #fff;
-                    border-radius:3rem;
-                }
+            button{
+                align-self: flex-end;
+                cursor: pointer;
+                width: 13rem;
+                height: 3.8rem;
+                background: #575757;
+                color: #fff;
+                border-radius:3rem;
             }
         }
     }

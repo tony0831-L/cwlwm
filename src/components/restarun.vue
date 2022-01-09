@@ -24,7 +24,7 @@ export default {
     methods:{
         choose(){
             localStorage.setItem("choose",JSON.stringify(this.res))
-            this.$router.replace('/rest')
+            this.$router.push('/rest')
         }
     }
 }

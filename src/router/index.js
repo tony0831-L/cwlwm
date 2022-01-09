@@ -21,6 +21,16 @@ const routes = [
     path:'/rest',
     name: 'rest',
     component: () => import( '../views/choose.vue')
+  },
+  {
+    path:'/regi',
+    name: 'regi',
+    component: () => import( '../views/regi.vue')
+  },
+  {
+    path:'/setting',
+    name: 'setting',
+    component: () => import( '../views/setting.vue')
   }
 ]
 

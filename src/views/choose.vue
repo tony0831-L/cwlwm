@@ -1,5 +1,4 @@
 <template>
-    <navTop/>
     <div class="info">
         <div class="img">
             <img :src="data.img" alt="">
@@ -16,6 +15,7 @@
             </div>
         </div>
     </div>
+    <navTop/>
     <foot/>
 </template>
 
@@ -45,6 +45,7 @@ export default {
 
 <style lang="scss" scoped>
     .info {
+        padding-top:8.6rem;
         padding-bottom: 2.1%;
         width:100%;
         .img{
@@ -52,12 +53,10 @@ export default {
             height: 19rem;
             display: flex;
             overflow: hidden;
-            position: relative;
             justify-content: center;
             align-items: center;
             background-color:#333;
             img{
-                position: absolute;
                 min-width: 100%;
                 opacity: .5;
             }
