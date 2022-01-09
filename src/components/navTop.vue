@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('../sass/anime.scss');
 nav{
     position: fixed;
     top: 0px;
@@ -53,6 +54,9 @@ nav{
     display: flex;
     justify-content: space-between;
     z-index: 10;
+    box-shadow: 0em 0em 0.2em 0.2em rgb(51 51 51 / 20%);
+    animation-name: fadein;
+    animation-duration: 1s;
     a{
         color: #313131;
         text-decoration: none;

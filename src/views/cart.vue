@@ -117,7 +117,7 @@ export default {
           position: absolute;
           pointer-events: none;
           color: #fff;
-          background: rgba(0, 0, 0, 0.6);
+          background-color: rgba(51,51,51,.623);
           padding: 2%;
         }
         iframe{
@@ -150,6 +150,11 @@ export default {
       height: 3.5rem;
       background: #575757;
       align-self: flex-end;
+      &:hover{
+        transition: all .5s;
+        background: #fff;
+        color: #333;
+      }
     }
   }
 </style>

@@ -6,7 +6,6 @@
             <p>{{dish.price}}元</p>
         </div>
         <div class="add" @click="add">
-            <!-- AddInCart -->
             <div class="test">
                 +&nbsp;<i class="bi bi-cart"></i>
             </div>
@@ -38,6 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('../sass/anime.scss');
 .dish{
     display: flex;
     margin: 0rem 2rem;
@@ -50,11 +50,14 @@ export default {
         justify-content: center;
         border-radius: 0px 50px;
         background: #E0E0E0;
+        box-shadow: .2rem .4rem .8rem 0 rgb(0 0 0 / .3);
         cursor: pointer;
         img{
             cursor: pointer;
             min-height: 100%;
             transition: all .5s;
+            animation-name: fadein;
+            animation-duration: 1.5s;
             &:hover{
                 min-height :105%;
             }
@@ -68,14 +71,24 @@ export default {
     }
     .add{
         align-self: flex-end;
-        font-size:1.25rem;
         margin: 2% 0%;
+        font-size:1.5rem;
         color: #fff;
         cursor: pointer;
         background: #636363;
+        box-shadow: 0em 0em 0.2em 0.2em rgb(51 51 51 / 20%);
+        border-radius: .3rem;
+        border: solid 1px rgba(51, 51, 51, 0.329);
+        &:hover{
+            background: #fff;
+            color: #333;
+            font-size:1.525rem;
+            margin: 2.1% 0%;
+            transition: all .75s;
+            border: solid 3px rgba(51, 51, 51, 0.329);
+        };
         .test{
             padding: .5rem 1rem;
-            font-size:1.5rem;
             display: flex;
         }
     }

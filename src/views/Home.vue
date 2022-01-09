@@ -42,7 +42,7 @@ export default {
           setTimeout(()=>{
             console.log(res.data.length)
             this.init()
-          },3000)
+          },1000)
         }else{
           this.res=res.data
         }
@@ -55,6 +55,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import url('../sass/anime.scss');
   .home{
     padding-top:6.6rem;
     margin: 4.1rem 0rem;
@@ -66,6 +67,8 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
+        animation-name: fadein;
+        animation-duration: 1.5s;
       }
       h1{
         margin-left: 2%;

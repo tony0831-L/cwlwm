@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('../sass/anime.scss');
 footer{
     position: fixed;
     bottom: 0px;
@@ -20,9 +21,11 @@ footer{
     justify-content: center;
     height:3.5rem;
     background: #B6B6B6;
+    animation-name: fadein;
+    animation-duration: .5s;
     h2{
         font-size: 1.25rem;
-        font-weight: 400;
+        font-weight: 600;
         color: 333;
     }
 }

@@ -18,9 +18,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('../sass/anime.scss');
     .search{
         display: flex;
         width: 100%;
+        animation-name: flyinTop;
+        animation-duration: 1.5s;
         input{
             margin-left: 6%;
             width: 54rem;

@@ -57,6 +57,8 @@ export default {
             align-items: center;
             background-color:#333;
             img{
+                animation-name: fadein;
+                animation-duration: 1.5s;
                 min-width: 100%;
                 opacity: .5;
             }
@@ -65,6 +67,7 @@ export default {
                 color: #fff;
                 font-size:3rem;
                 font-weight: 500;
+                text-shadow: 0.1em 0.1em 0.5em #000;
             }
         }
         .des{
@@ -78,6 +81,8 @@ export default {
             }
         }
         .menu{
+            animation-name: flyinleft;
+            animation-duration: 1.5s;
             text-align: left;
             padding: 0% 5rem;
             h2{
