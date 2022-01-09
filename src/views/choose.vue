@@ -46,7 +46,7 @@ export default {
 <style lang="scss" scoped>
     .info {
         padding-top:6.6rem;
-        padding-bottom: 2.1%;
+        padding-bottom: 4.1%;
         width:100%;
         .img{
             width:100%;
