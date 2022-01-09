@@ -12,10 +12,13 @@ export default {
 
 <style lang="scss" scoped>
 footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height:5.5rem;
+    height:3.5rem;
     background: #B6B6B6;
     h2{
         font-size: 1.25rem;
