@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('../sass/anime.scss');
     .info {
         padding-top:6.6rem;
         padding-bottom: 4.1%;
@@ -81,16 +82,18 @@ export default {
             }
         }
         .menu{
-            animation-name: flyinleft;
-            animation-duration: 1.5s;
             text-align: left;
             padding: 0% 5rem;
             h2{
+                animation-name: fadein;
+                animation-duration: 1.5s;
                 font-weight: 500;
                 font-size: 1.4rem;
                 margin-bottom: 2rem;
             }
             .dishes{
+                animation-name: flyinleft;
+                animation-duration: 1.5s;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 justify-items: center;

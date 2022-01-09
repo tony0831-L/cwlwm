@@ -6,6 +6,7 @@
       <h2>loading...</h2>
     </div>
     <div class="re">
+      <h2>熱門餐廳</h2>
       <div class="ress">
         <res :res="i" v-for="(i,index) in res" :key="index"/>
       </div>
@@ -73,6 +74,10 @@ export default {
       h1{
         margin-left: 2%;
         font-weight: 400;
+      }
+      h2{
+        margin-left: 4rem;
+        font-size: 2rem;
       }
     }
     .loading{

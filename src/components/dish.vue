@@ -37,7 +37,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('../sass/anime.scss');
 .dish{
     display: flex;
     margin: 0rem 2rem;
@@ -56,8 +55,6 @@ export default {
             cursor: pointer;
             min-height: 100%;
             transition: all .5s;
-            animation-name: fadein;
-            animation-duration: 1.5s;
             &:hover{
                 min-height :105%;
             }

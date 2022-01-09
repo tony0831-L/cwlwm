@@ -34,6 +34,7 @@ export default {
             padding: 0% .8%;
         }
         .filter{
+            cursor: pointer;
             width: 9.5rem;
             height: 2.19rem;
             background: #6A6A6A;
