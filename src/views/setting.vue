@@ -12,7 +12,7 @@
             <div class="block">頭像連結</div>
             <input type="text" v-model="user.img" placeholder="Account/Selfimage">
         </div>
-        <div class="main-btn">
+        <div class="main-btn" @click="submit">
             確認
         </div>
     </div>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import postData from '../utils/postData.js'
 import navTop from '../components/navTop.vue'
 export default {
     name:"setting",
@@ -33,25 +34,45 @@ export default {
             }
         }     
     },
+    methods:{
+        submit(){
+            postData.editUser({name:this.user.name,data:this.user}).then(res=>{
+                if(res.data.stat){
+                    this.$router.push("/")
+                }
+            })
+        } 
+    },
     mounted(){
         if(!JSON.parse(localStorage.getItem("userInfo")).name){
-                this.$router.replace('/login')
-                    }else{
-                        this.user=JSON.parse(localStorage.getItem("userInfo"))
-                    }     
+            this.$router.replace('/login')
+                }else{
+                    this.user=JSON.parse(localStorage.getItem("userInfo"))
+                }     
         }
 }
 </script>
 <style lang="scss" scoped>
+@import url('../sass/anime.scss');
 .main{
-    padding: 20rem;
+    display: flex;
+    justify-content: center;
     padding-top:20rem;
+
     .main-container{
+        width: 50%;
         display: flex;
+        justify-content: center;
         flex-direction: row;
+        padding-bottom: 10px;
+        padding-bottom: 3rem;
+        border-bottom:solid 3px #6b6a6a;
+        animation-name: fadein;
+        animation-duration: 2s;
         .img{
         width: 16rem;
         height: 16rem;
+        justify-content: center;
         border-radius: 100%;
         background-color: #313131;
         border: solid 1px #31313109;
@@ -73,12 +94,18 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        left: 60rem;
+        top: 20.5rem;
         height: 3rem;
         padding: 0em 2rem;
-        position: absolute;
         font-size: 20px;
         border: solid 5px #FFDA58;;
+        margin-left: 3rem;
+        cursor: pointer;
+
+        &:hover{
+            font-size: 25px;
+            transition:all 0.5s;
+        }
     }
     }
 }

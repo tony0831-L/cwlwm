@@ -26,7 +26,9 @@
     font-size:90%;
   }
   #app {
-    font-family: 'Roboto', 'Avenir','Helvetica','Arial','sans-serif';
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
