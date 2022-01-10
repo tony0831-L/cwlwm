@@ -15,6 +15,11 @@ async function getUserHis(name){
     return res
 }
 
+async function getResByName(name){
+    let res =  await axios.put('https://cwslbot.herokuapp.com/res/findResByName',{"owner":name})
+    return res
+}
+
 module.exports = {
-    getRes,getUser,getUserHis
+    getRes,getUser,getUserHis,getResByName
 }

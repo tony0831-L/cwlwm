@@ -6,7 +6,7 @@
       <h2>loading...</h2>
     </div>
     <div class="re">
-      <h2>熱門餐廳</h2>
+      <h2>人氣精選✨</h2>
       <div class="ress">
         <res :res="i" v-for="(i,index) in res" :key="index"/>
       </div>

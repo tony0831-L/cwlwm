@@ -13,8 +13,8 @@
             <h2 v-show="!user.img">未登入&nbsp;&nbsp;&nbsp;</h2>
             <ul v-show="showList">
                 <li><router-link to="/setting">個人設定</router-link></li>
-                <li>歷史訂單</li>
-                <li>我的餐廳</li>
+                <li><router-link to="/setting">歷史訂單</router-link></li>
+                <li><router-link to="/myRes">我的餐廳</router-link></li>
                 <li @click="logOut">登出</li>
             </ul>
         </div>

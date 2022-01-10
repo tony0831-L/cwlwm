@@ -31,7 +31,22 @@ const routes = [
     path:'/setting',
     name: 'setting',
     component: () => import( '../views/setting.vue')
-  }
+  },
+  {
+    path:'/myRes',
+    name: 'myRes',
+    component: () => import( '../views/myRestarun.vue')
+  },
+  {
+    path:'/addRes',
+    name: 'addRes',
+    component: () => import( '../views/addRes.vue')
+  },
+  {
+    path:'/editRes',
+    name: 'editRes',
+    component: () => import( '../views/editRes.vue')
+  },
 ]
 
 const router = createRouter({

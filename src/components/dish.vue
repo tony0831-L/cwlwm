@@ -5,7 +5,7 @@
             <p>{{dish.name}}</p>
             <p>{{dish.price}}元</p>
         </div>
-        <div class="add" @click="add">
+        <div class="add" @click="add" v-show="!only">
             <div class="test">
                 +&nbsp;<i class="bi bi-cart"></i>
             </div>
@@ -16,20 +16,22 @@
 <script>
 import bus from "../utils/bus.ts";
 export default {
-    props:["res","dish"],
+    props:["res","dish","only"],
     name:"dish",
     methods:{
         add(){
-            let dList = JSON.parse(localStorage.getItem("dList")).list;
-            if (JSON.parse(localStorage.getItem("dList")).name!==""&&this.res!==JSON.parse(localStorage.getItem("dList")).name) {
-                alert("不同餐廳")
-            } else {
-                dList.push(this.dish);
-                localStorage.setItem("dList",JSON.stringify({
-                    name:this.res,
-                    list:dList
-                }));
-                bus.emit("reload");
+            if(this.only){
+                let dList = JSON.parse(localStorage.getItem("dList")).list;
+                if (JSON.parse(localStorage.getItem("dList")).name!==""&&this.res!==JSON.parse(localStorage.getItem("dList")).name) {
+                    alert("不同餐廳")
+                } else {
+                    dList.push(this.dish);
+                    localStorage.setItem("dList",JSON.stringify({
+                        name:this.res,
+                        list:dList
+                    }));
+                    bus.emit("reload");
+                }
             }
         }
     }
