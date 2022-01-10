@@ -5,8 +5,8 @@
             <h1>{{data.name}}</h1>
         </div>
         <div class="des">
-            <p><i class="bi bi-geo-alt-fill"></i>地址: {{data.add}}</p>
-            <p><i class="bi bi-star-fill"></i>顧客評價: {{data.star}}</p>
+            <p><i class="bi bi-geo-alt-fill loc"></i>地址: {{data.add}}</p>
+            <p><i class="bi bi-star-fill star"></i>顧客評價: {{data.star}}</p>
         </div>
         <div class="menu">
             <h2>Menu:</h2>
@@ -79,6 +79,12 @@ export default {
             font-size: 1.25rem;
             p{
                 margin: 1% 4%;
+            }
+            .loc{
+                color: #EA7838;;
+            }
+            .star{
+                color: #276fbf;
             }
         }
         .menu{
