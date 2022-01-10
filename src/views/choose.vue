@@ -103,7 +103,7 @@ export default {
                 animation-duration: 1.5s;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 5rem;
+                gap: 2rem 5rem;
                 justify-items: start
             }
         }

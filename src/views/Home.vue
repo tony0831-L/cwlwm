@@ -5,7 +5,7 @@
       <img src="../assets/loading.gif" alt="loading">
       <h2>loading...</h2>
     </div>
-    <div class="re">
+    <div class="re" v-show="res.length">
       <h2>人氣精選✨</h2>
       <div class="ress">
         <res :res="i" v-for="(i,index) in res" :key="index"/>
