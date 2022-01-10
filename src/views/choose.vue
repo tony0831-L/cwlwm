@@ -98,11 +98,13 @@ export default {
                 margin-bottom: 2rem;
             }
             .dishes{
+                margin-left: 15rem;
                 animation-name: flyinleft;
                 animation-duration: 1.5s;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                justify-items: center;
+                gap: 5rem;
+                justify-items: start
             }
         }
     }
