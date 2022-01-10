@@ -24,7 +24,6 @@ export default {
     methods:{
         choose(){
             localStorage.setItem("choose",JSON.stringify(this.res))
-           
             this.$router.push ({ path: '/rest', query: { name:this.res.name }})
         }
     }

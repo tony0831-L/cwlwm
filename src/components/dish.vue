@@ -20,7 +20,7 @@ export default {
     name:"dish",
     methods:{
         add(){
-            if(this.only){
+            if(!this.only){
                 let dList = JSON.parse(localStorage.getItem("dList")).list;
                 if (JSON.parse(localStorage.getItem("dList")).name!==""&&this.res!==JSON.parse(localStorage.getItem("dList")).name) {
                     alert("不同餐廳")

@@ -47,6 +47,11 @@ const routes = [
     name: 'editRes',
     component: () => import( '../views/editRes.vue')
   },
+  {
+    path:'/history',
+    name: 'history',
+    component: () => import( '../views/history.vue')
+  },
 ]
 
 const router = createRouter({
