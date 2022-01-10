@@ -11,7 +11,9 @@
         <div class="menu">
             <h2>Menu:</h2>
             <div class="dishes">
-                <dish v-for="(i,index) in data.menu" :key="index" :dish="i" :res="data.name"/>
+                <div class="dishwrapper" v-for="(i,index) in data.menu" :key="index">
+                    <dish :dish="i" :res="data.name"/>
+                </div>
             </div>
         </div>
     </div>
@@ -98,13 +100,18 @@ export default {
                 margin-bottom: 2rem;
             }
             .dishes{
-                margin-left: 15rem;
+                padding: 2%;
                 animation-name: flyinleft;
                 animation-duration: 1.5s;
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: .6fr .6fr;
                 gap: 2rem 5rem;
-                justify-items: start
+                justify-items: center;
+                margin: auto;
+                .dishwrapper{
+                    width: 80%;
+                    display: flex;
+                }
             }
         }
     }
