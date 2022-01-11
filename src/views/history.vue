@@ -4,7 +4,7 @@
         <div class = "title">
             <h2>歷史訂單：</h2>
             <div class = "list1">
-                <list v-for="(i, index) in list" :key = 'index'>
+                <list v-for="(i, index) in list" :key = 'index' @click="choise(i)">
                     <img :src="i.list[0].img" alt="">
                     <div class="info">
                         <div class = "res">
@@ -13,9 +13,15 @@
                         <div class = "time">
                             {{ i.time }}
                         </div>
-                        <p>
-                            {{i.list.length}}項餐點
-                        </p>
+                        <div class="dishlist">
+                            <p>
+                                {{i.list.length}}項餐點: 
+                            </p>
+                            <ul>
+                                <li v-for="(y,index) in i.list" :key="index" v-show="index<2">{{index+1}}.{{y.name}}</li>
+                                <li>剩餘{{i.list.length-2}}項....</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="comment">
                         評論:&nbsp; {{i.comment}}
@@ -49,7 +55,9 @@ export default {
 <style lang="scss" scoped>
 @import url('../sass/anime.scss');
  .history {
-     padding-top: 9rem;
+    padding-top: 9rem;
+    animation-name: flyinTop;
+    animation-duration: 1.5s;
      .title {
          text-align: left;
          padding: 0% 4.2%;
@@ -63,16 +71,21 @@ export default {
             list {
                 width: 70%;
                 display: grid;
+                cursor: pointer;
+                box-shadow: 0em 0em 0.2em 0.2em rgb(51 51 51 / 20%);
                 grid-template-columns: 1fr 1fr 1fr;
                 align-items: center;
                 justify-items:start;
                 gap: 75px;
                 margin-top: 25px;
                 margin-bottom: 50px;
+                &:hover{
+                    transition: all .25s;
+                    width: 70.5%;
+                }
                 .info{
                     display: flex;
                     flex-direction: column;
-                    gap: .6rem;
                     margin-left: -2rem;
                 }
                 .comment{
@@ -81,7 +94,7 @@ export default {
                 img {
                     width: 164px;
                     height: 154px;
-                    margin-top: 20px;
+                    margin: 1rem;
                     margin-left: 140px;
                     border-radius: 100%;
                     border: solid 1px;
@@ -95,6 +108,15 @@ export default {
                 .time {
                     font-size: 16px;
                     line-height: 28px;
+                }
+                .dishlist{
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        li{
+                            list-style-type: none;
+                        }
+                    }
                 }
             }
          }
